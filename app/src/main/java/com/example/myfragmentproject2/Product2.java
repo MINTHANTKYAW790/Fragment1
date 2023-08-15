@@ -14,10 +14,10 @@ import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Product1#newInstance} factory method to
+ * Use the {@link Product2#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Product1 extends Fragment {
+public class Product2 extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -27,11 +27,11 @@ public class Product1 extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private ImageView product1;
-    private TextView textViewP1;
-    private Button button1;
+    private TextView textViewP2;
+    private ImageView product2;
+    private Button button2;
 
-    public Product1() {
+    public Product2() {
         // Required empty public constructor
     }
 
@@ -41,11 +41,11 @@ public class Product1 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Product1.
+     * @return A new instance of fragment Product2.
      */
     // TODO: Rename and change types and number of parameters
-    public static Product1 newInstance(String param1, String param2) {
-        Product1 fragment = new Product1();
+    public static Product2 newInstance(String param1, String param2) {
+        Product2 fragment = new Product2();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,18 +66,17 @@ public class Product1 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View v = inflater.inflate(R.layout.fragment_product1,container,false);
-        product1 = (ImageView) v.findViewById(R.id.imageView);
-        textViewP1 = (TextView) v.findViewById(R.id.textView);
-        button1 = (Button) v.findViewById(R.id.button);
-        button1.setOnClickListener(new View.OnClickListener() {
+        View v = inflater.inflate(R.layout.fragment_product2, container, false);
+        textViewP2 = (TextView ) v.findViewById(R.id.textView3);
+        product2 = (ImageView) v.findViewById(R.id.imageView2);
+        button2 = (Button) v.findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(),textViewP1.getText(), Toast.LENGTH_SHORT).show();
-
+                //your code here
+                Toast.makeText(getContext(),textViewP2.getText(), Toast.LENGTH_SHORT).show();
             }
         });
-
         return v;
     }
 }
